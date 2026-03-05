@@ -16,14 +16,24 @@ function Hero() {
             <span className="highlight">Python Full Stack Developer</span>
           </h2>
           <p className="hero-description">
-            I build modern web applications using React, Django, and PostgreSQL. 
-            Passionate about clean UI and scalable backend systems.
+            Passionate Python Full-Stack Developer specializing in React and Django, focused on building modern, efficient, and user-friendly web applications.
           </p>
           
           <div className="hero-actions">
-            <button className="btn-primary">Download CV ↗</button>
-            <button className="btn-secondary">Contact Me</button>
-          </div>
+            {/* Change button to an anchor tag with the download attribute */}
+            <a 
+                href="/Fathima_Naila_Python_Fullstack.docx.pdf" 
+                download="Fathima_Naila_Resume.pdf" 
+                className="btn-primary"
+                style={{ textDecoration: 'none', display: 'inline-block' }}
+            >
+                Download CV ↗
+            </a>
+
+            <button className="btn-secondary" onClick={() => window.location.href = '#contact'}>
+                <span className="btn-icon">✉</span> Contact Me
+            </button>
+            </div>
         </div>
 
         <div className="hero-visual">

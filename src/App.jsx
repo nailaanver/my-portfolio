@@ -8,6 +8,12 @@ function App() {
     <div>
       <Navbar></Navbar>
       <Hero></Hero>
+<div className="vertical-socials">
+  <div className="line"></div>
+  <a href="#">Facebook</a>
+  <a href="#">Twitter</a>
+  <a href="#">LinkedIn</a>
+</div>
     </div>
   );
 }

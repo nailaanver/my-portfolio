@@ -62,14 +62,32 @@
 }
 
 .btn-primary {
+  /* Font Styling */
+  font-family: 'Inter', sans-serif; /* Clean, modern font */
+  font-weight: 700;                /* Makes it bold like the reference */
+  font-size: 1rem;
+  letter-spacing: 0.5px;           /* Adds a professional touch */
+  text-transform: uppercase;       /* Optional: makes it look more like a call-to-action */
+  text-decoration: none;           /* Removes underline from anchor tag */
+  
+  /* Layout & Shape */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;                       /* Gap between text and arrow */
+  
   background-color: var(--smoke-signal);
   color: var(--pale-ivory);
-  padding: 16px 32px;
+  padding: 16px 35px;
   border-radius: 50px;
-  border: none;
-  font-weight: 700;
-  cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--hover-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(255, 77, 109, 0.2);
 }
 
 .btn-primary:hover {
@@ -80,19 +98,20 @@
 .btn-secondary {
   background: transparent;
   color: var(--smoke-signal);
-  border: none;
+  border: 1px solid rgba(41, 37, 40, 0.2); /* Thin border */
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: 600;
   display: flex;
   align-items: center;
   gap: 8px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: color 0.3s ease;
-  font-size: 16px;
+  transition: 0.3s;
 }
 
 .btn-secondary:hover {
-  color: var(--hover-dark);
-   /* Turns pink on hover */
+  background-color: var(--smoke-signal);
+  color: var(--pale-ivory);
+  border-color: var(--smoke-signal);
 }
 
 .btn-icon {
@@ -113,4 +132,28 @@
   max-width: 450px;
   z-index: 2;
   border-radius: 20px; /* Optional: adds a clean look */
+}
+
+.hero-visual::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255, 77, 109, 0.2) 0%, transparent 70%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; /* Sits behind the image */
+  border-radius: 50%;
+}
+
+.greeting {
+  display: inline-block;
+  background-color: rgba(255, 77, 109, 0.1); /* Light pink tint */
+  color: var(--hover-dark);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 20px;
 }

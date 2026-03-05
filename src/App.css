@@ -18,3 +18,30 @@
   align-items: center;
   box-sizing: border-box;
 }
+
+.vertical-socials {
+  position: fixed;
+  left: 30px;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  z-index: 10;
+}
+
+.vertical-socials a {
+  writing-mode: vertical-rl; /* Rotates the text */
+  text-decoration: none;
+  color: var(--smoke-signal);
+  font-size: 0.8rem;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.vertical-socials .line {
+  width: 1px;
+  height: 100px;
+  background-color: var(--smoke-signal);
+  opacity: 0.2;
+}
