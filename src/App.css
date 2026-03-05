@@ -1,7 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 :root {
   --pale-ivory: #F8F5E2;
   --smoke-signal: #292528;
   --text-light: #F8F5E2;
   --text-dark: #292528;
   --hover-dark: #FF4D6D;
+}
+.container {
+  max-width: 1200px; /* This creates the consistent side gap */
+  margin: 0 auto;    /* This centers the content on the screen */
+  padding: 0 40px;   /* Safety gap for smaller screens */
+  width: 100%;
+  align-items: center;
+  box-sizing: border-box;
 }

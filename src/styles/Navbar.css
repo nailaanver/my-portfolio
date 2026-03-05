@@ -1,49 +1,56 @@
-body {
-  margin: 0;
-  padding: 0;
-  background-color: var(--pale-ivory);
-  font-family: 'Poppins', sans-serif;
-  color: var(--text-dark);
+
+.navbar-wrapper {
+  width: 100%;
+  background-color: var(--smoke-signal); /* Dark Background */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 10px 0;
 }
 
-
-.navbar {
+.navbar-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 8%;
-  background-color: var(--smoke-signal);
+  height: 70px;
 }
 
 .logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 24px;
-  font-weight: 500;
-  letter-spacing: 2px;
-  color: var(--pale-ivory);
-  text-transform: uppercase;
-}
-.logo {
-  transition: 0.3s ease;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--pale-ivory); /* Light Text */
+  letter-spacing: -1px;
 }
 
-.logo:hover {
-  letter-spacing: 5px;
+.accent-dot {
+  color: var(--hover-dark);
 }
 
 .nav-links {
-  list-style: none;
   display: flex;
-  gap: 25px;
+  list-style: none;
+  gap: 35px;
 }
 
-.nav-links li a {
+.nav-links a {
   text-decoration: none;
   color: var(--pale-ivory);
-  font-size: 16px;
-  transition: 0.3s ease;
+  font-weight: 500;
+  opacity: 0.9;
+  transition: 0.3s;
 }
 
-.nav-links li a:hover {
-  color: #FF4D6D;
+.nav-links a:hover {
+  color: var(--hover-dark);
+  opacity: 1;
+}
+
+.btn-hire {
+  background-color: var(--hover-dark);
+  color: white;
+  text-decoration: none;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: 0.3s;
 }
