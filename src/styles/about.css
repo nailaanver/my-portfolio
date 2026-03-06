@@ -1,0 +1,70 @@
+.about-me {
+  /* Using your pale-ivory background to match the Hero */
+  background-color: var(--pale-ivory);
+  color: var(--smoke-signal);
+  padding: 80px 10%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* font-family: 'Inter', sans-serif; */
+}
+
+.about-content {
+  max-width: 700px;
+}
+
+.about-me h2 {
+  color: var(--smoke-signal);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.about-me p {
+  line-height: 1.8;
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: #555; /* A slightly lighter shade for better readability */
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  border-top: 1px solid #ddd; /* Adds a nice separator */
+  padding-top: 30px;
+}
+
+.stats strong {
+  color: var(--hover-dark); /* Using your signature accent color */
+  font-size: 2rem;
+  display: block;
+}
+
+.stat-item {
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.stat-item:hover {
+  transform: translateY(-10px); /* Lifts the item up */
+}
+
+.stat-item:hover strong {
+  color: #fff; /* Flashes white or another color on hover */
+  text-shadow: 0 0 10px var(--hover-dark);
+}
+
+.about-me {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}

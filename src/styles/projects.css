@@ -1,0 +1,52 @@
+.projects-section {
+  padding: 80px 10%;
+  background-color: var(--pale-ivory); /* Matches your Hero background */
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 250px;
+  background: #eee;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.category {
+  color: #888;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.project-card h3 {
+  color: var(--smoke-signal);
+  margin: 10px 0;
+}
+
+.view-all {
+  background: var(--hover-dark);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}

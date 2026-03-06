@@ -1,6 +1,8 @@
 import Navbar from "./components/Navbar";
 import './App.css'
 import Hero from "./components/Hero";
+import About from "./components/About";
+import Projects from "./components/Projects";
 
 
 function App() {
@@ -8,6 +10,8 @@ function App() {
     <div>
       <Navbar></Navbar>
       <Hero></Hero>
+      <About></About>
+      <Projects></Projects>
 <div className="vertical-socials">
   <div className="line"></div>
   <a href="#">Facebook</a>
