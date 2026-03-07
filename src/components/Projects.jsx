@@ -1,38 +1,45 @@
 import React from "react";
-import { motion } from "framer-motion";
 import "../styles/projects.css";
-
-const projects = [
-  { title: "Task Management App", category: "App / Development" },
-  { title: "E-Commerce Dashboard", category: "Web / Design" },
-  { title: "Portfolio Website", category: "Frontend" },
-  { title: "Food Delivery UI", category: "UI/UX" },
-];
+import projects from "../data/projectsData";
 
 function Projects() {
   return (
     <section id="projects" className="projects-section">
-      <div className="header-row">
-        <h2>My Featured Projects</h2>
-        <button className="view-all">View All Projects</button>
-      </div>
+      <div className="container">
+
+        <div className="header-row">
+          <h2>My Featured Projects</h2>
+          <button className="view-all">View All Projects</button>
+        </div>
+
+<div className="project-grid">
+  {projects.map((proj, index) => (
+    <div className="project-card" key={index}>
       
-      <div className="project-grid">
-        {projects.map((proj, index) => (
-          <motion.div 
-            className="project-card" 
-            key={index}
-            whileHover={{ y: -10 }}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <div className="image-placeholder"></div>
-            <p className="category">{proj.category}</p>
-            <h3>{proj.title}</h3>
-            <div className="arrow">↗</div>
-          </motion.div>
+      <div className="project-image">
+
+        <img src={proj.image} alt={proj.title} />
+
+        <div className="overlay">
+          <a href={proj.demo} target="_blank" rel="noreferrer">Live Demo</a>
+          <a href={proj.code} target="_blank" rel="noreferrer">View Code</a>
+        </div>
+
+      </div>
+
+      <p className="category">{proj.category}</p>
+      <h3>{proj.title}</h3>
+
+      <div className="stack">
+        {proj.stack.map((tech, i) => (
+          <span key={i}>{tech}</span>
         ))}
+      </div>
+
+    </div>
+  ))}
+</div>
+
       </div>
     </section>
   );
