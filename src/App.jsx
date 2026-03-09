@@ -8,6 +8,7 @@ import Projects from "./components/Projects";
 import AllProjects from "./pages/AllProjects";
 
 import "./App.css";
+import Skills from "./components/Skills";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
               <Hero />
               <About />
               <Projects />
+              <Skills></Skills>
 
               <div className="vertical-socials">
                 <div className="line"></div>

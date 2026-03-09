@@ -2,6 +2,8 @@ import collegeImg from "../assets/images/college.jpeg";
 import ecommerseImg from "../assets/images/cohous.jpeg";
 import bloodImg from "../assets/images/blood.jpeg";
 import hostelImg from "../assets/images/hostel.jpeg";
+import courseImg from "../assets/images/course.jpeg";
+import portfolioImg from "../assets/images/3D-portfolio.jpeg";
 
 const projects = [
   {
@@ -37,12 +39,20 @@ const projects = [
     code: "https://github.com/nailaanver/college_project"
   },
   {
-    title: "ACADAMICS",
-    category: "College Management System",
+    title: "CourseGate",
+    category: "Course Registration Platform",
     stack: ["Python", "Django", "HTML", "CSS"],
-    image: "/images/college.png",
-    demo: "https://college-project-pfpb.onrender.com",
-    code: "https://github.com/nailaanver/college_project"
+    image: courseImg,
+    demo: "https://course-registration-1.onrender.com",
+    code: "https://github.com/nailaanver/course_registration"
+  },
+  {
+    title: "3D-Portfolio",
+    category: "Portfolio",
+    stack: ["React", "Tailwind CSS"],
+    image: portfolioImg,
+    demo: "https://3-d-portfolio-jet-eight.vercel.app/",
+    code: "https://github.com/nailaanver/3D-portfolio"
   },
 ];
 
