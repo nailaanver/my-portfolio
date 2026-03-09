@@ -10,10 +10,16 @@
   margin-bottom: 40px;
 }
 
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 30px;
+.project-grid{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:30px;
+}
+
+@media (max-width:768px){
+  .project-grid{
+    grid-template-columns:1fr;
+  }
 }
 
 .project-card {
@@ -95,4 +101,219 @@
   border-radius:6px;
   text-decoration:none;
   font-size:0.9rem;
+}
+
+
+
+
+/* all projects */
+
+.all-projects{
+  padding:120px 10%;
+  background:var(--pale-ivory);
+}
+
+.section-title{
+  font-size:2rem;
+  margin-bottom:40px;
+  color:var(--smoke-signal);
+}
+
+
+
+.project-card{
+  background:white;
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+
+.project-card:hover{
+  transform:translateY(-8px);
+}
+
+.project-image{
+  position:relative;
+  height:220px;
+}
+
+.project-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.6);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:15px;
+  opacity:0;
+  transition:0.3s;
+}
+
+.project-image:hover .overlay{
+  opacity:1;
+}
+
+.overlay a{
+  background:var(--hover-dark);
+  color:white;
+  padding:8px 14px;
+  border-radius:6px;
+  text-decoration:none;
+  font-size:0.9rem;
+}
+
+.category{
+  color:#777;
+  font-size:0.9rem;
+  margin:15px 20px 0;
+}
+
+.project-card h3{
+  margin:8px 20px;
+  color:var(--smoke-signal);
+}
+
+.stack{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  padding:0 20px 20px;
+}
+
+.stack span{
+  background:#f1f1f1;
+  padding:4px 10px;
+  border-radius:20px;
+  font-size:0.8rem;
+}
+
+
+/* Update your .project-card */
+.project-card {
+  background: #ffffff;
+  border-radius: 20px; /* Softer corners */
+  border: 1px solid rgba(0, 0, 0, 0.05); /* Subtle border */
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Improve the Tech Stack Chips */
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0 20px 24px; /* Increased bottom padding */
+}
+
+.stack span {
+  background: rgba(var(--hover-dark-rgb), 0.1); /* Light tint of your main color */
+  color: var(--hover-dark);
+  font-weight: 500;
+  padding: 5px 12px;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Hover Overlay Buttons */
+.overlay a {
+  background: white;
+  color: var(--smoke-signal);
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 50px;
+  transition: 0.2s;
+}
+
+.overlay a:hover {
+  background: var(--hover-dark);
+  color: white;
+  transform: scale(1.05);
+}
+
+.view-all {
+  position: relative;
+  background: transparent;
+  color: var(--smoke-signal);
+  font-weight: 600;
+  text-decoration: none;
+  padding: 10px 0;
+  transition: 0.3s;
+}
+
+/* Creating an animated underline instead of a solid box */
+.view-all::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--hover-dark);
+  transform: scaleX(0.3);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.view-all:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* In projects.css */
+/* Final structure summary */
+
+.project-image {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.8); /* Darken base image */
+  transition: filter 0.3s ease;
+}
+
+.project-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom, 
+    rgba(0, 0, 0, 0.1) 0%, 
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+  transition: background 0.3s ease;
+}
+
+.project-image:hover img {
+  filter: brightness(1); /* Lighten image on hover */
+}
+
+.project-image:hover::after {
+  background: rgba(0,0,0,0.3); /* Lighten tint on hover */
+}
+
+/* Ensure your buttons overlay is above the pseudo-element tint */
+.overlay {
+  z-index: 2; /* Important: Higher than ::after (z-index 1) */
 }

@@ -1,19 +1,23 @@
 import React from "react";
 import "../styles/projects.css";
 import projects from "../data/projectsData";
+import { Link } from "react-router-dom";
 
 function Projects() {
+  const featuredProjects = projects.slice(0,4);
   return (
     <section id="projects" className="projects-section">
       <div className="container">
 
         <div className="header-row">
           <h2>My Featured Projects</h2>
-          <button className="view-all">View All Projects</button>
+          <Link to="/projects" className="view-all">
+  View All Projects
+</Link>
         </div>
 
 <div className="project-grid">
-  {projects.map((proj, index) => (
+  {featuredProjects.map((proj, index) => (
     <div className="project-card" key={index}>
       
       <div className="project-image">

@@ -1,68 +1,82 @@
 .about-me {
-  /* Using your pale-ivory background to match the Hero */
-  background-color: var(--pale-ivory);
+  /* Replace 'your-image-name.png' with the actual path to the saved image */
+  background-image: url('../assets/images/bg-hero.png'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  /* Fallback color if image fails to load */
+  background-color: var(--pale-ivory); 
+  
   color: var(--smoke-signal);
-  padding: 80px 10%;
+  padding: 100px 10%;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* font-family: 'Inter', sans-serif; */
+  min-height: 80vh;
+  animation: fadeIn 1.5s ease-in-out;
 }
 
 .about-content {
-  max-width: 700px;
+  max-width: 800px;
+  /* Adding a slight glassmorphism effect to make text readable over the patterns */
+  background: rgba(248, 245, 226, 0.4); 
+  backdrop-filter: blur(5px);
+  padding: 40px;
+  border-radius: 24px;
 }
 
 .about-me h2 {
   color: var(--smoke-signal);
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  font-weight: 800;
 }
 
 .about-me p {
   line-height: 1.8;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   margin-bottom: 40px;
-  color: #555; /* A slightly lighter shade for better readability */
+  color: var(--smoke-signal);
+  opacity: 0.9;
 }
 
 .stats {
   display: flex;
   justify-content: center;
-  gap: 60px;
-  border-top: 1px solid #ddd; /* Adds a nice separator */
-  padding-top: 30px;
-}
-
-.stats strong {
-  color: var(--hover-dark); /* Using your signature accent color */
-  font-size: 2rem;
-  display: block;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 .stat-item {
-  transition: transform 0.3s ease, color 0.3s ease;
-  cursor: pointer;
-  padding: 10px;
+  background: white;
+  padding: 25px 35px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+  min-width: 150px;
+  border: 1px solid rgba(41, 37, 40, 0.1);
+}
+
+.stats strong {
+  color: var(--hover-dark);
+  font-size: 2.2rem;
+  display: block;
+  margin-bottom: 5px;
 }
 
 .stat-item:hover {
-  transform: translateY(-10px); /* Lifts the item up */
+  transform: translateY(-10px);
+  background: var(--smoke-signal);
+  color: var(--text-light);
 }
 
 .stat-item:hover strong {
-  color: #fff; /* Flashes white or another color on hover */
-  text-shadow: 0 0 10px var(--hover-dark);
+  color: var(--hover-dark);
+  text-shadow: none;
 }
-
-.about-me {
-  animation: fadeIn 1.5s ease-in-out;
-}
-
-
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(30px); }

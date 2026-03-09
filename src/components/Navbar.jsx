@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../styles/Navbar.css";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,11 +27,25 @@ function Navbar() {
 
         {/* Links slide in when isMenuOpen is true */}
         <ul className={`nav-links ${isMenuOpen ? "active" : ""}`}>
-          <li><a href="#home" onClick={() => setIsMenuOpen(false)}>Home</a></li>
-          <li><a href="#about" onClick={() => setIsMenuOpen(false)}>About</a></li>
-          <li><a href="#skills" onClick={() => setIsMenuOpen(false)}>Skills</a></li>
-          <li><a href="#projects" onClick={() => setIsMenuOpen(false)}>Projects</a></li>
-          <li><a href="#contact" onClick={() => setIsMenuOpen(false)}>Contact</a></li>
+          <li>
+            <Link to="/" onClick={() => setIsMenuOpen(false)}>Home</Link>
+          </li>
+
+          <li>
+            <a href="#about" onClick={() => setIsMenuOpen(false)}>About</a>
+          </li>
+
+          <li>
+            <a href="#skills" onClick={() => setIsMenuOpen(false)}>Skills</a>
+          </li>
+
+          <li>
+            <Link to="/projects" onClick={() => setIsMenuOpen(false)}>Projects</Link>
+          </li>
+
+          <li>
+            <a href="#contact" onClick={() => setIsMenuOpen(false)}>Contact</a>
+          </li>
         </ul>
 
         <div className="nav-actions">
