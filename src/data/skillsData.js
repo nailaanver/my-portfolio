@@ -12,16 +12,16 @@ import mongodb from "../assets/images/mongodb.png";
 
 const skills = [
   { name: "HTML", percent: 98, icon: html },
-  { name: "CSS", percent: 90, icon: css },
+  { name: "CSS", percent: 95, icon: css },
   { name: "Javascript", percent: 90, icon: tailwind },
-  { name: "Bootstrap", percent: 79, icon: bootstrap },
-  { name: "React JS", percent: 88, icon: react },
-  { name: "Python", percent: 93, icon: python },
-  { name: "Django", percent: 93, icon: django },
+  { name: "Bootstrap", percent: 90, icon: bootstrap },
+  { name: "React JS", percent: 93, icon: react },
+  { name: "Python", percent: 95, icon: python },
+  { name: "Django", percent: 95, icon: django },
   { name: "API", percent: 93, icon: api },
-  { name: "MySQL", percent: 93, icon: mysql },
-  { name: "PosgreSQL", percent: 93, icon: pgsql },
-  { name: "MongoDB", percent: 93, icon: mongodb },
+  { name: "MySQL", percent: 98, icon: mysql },
+  { name: "PosgreSQL", percent: 90, icon: pgsql },
+  { name: "MongoDB", percent: 95, icon: mongodb },
 ];
 
 export default skills;

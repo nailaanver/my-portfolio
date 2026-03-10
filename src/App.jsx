@@ -9,6 +9,7 @@ import AllProjects from "./pages/AllProjects";
 
 import "./App.css";
 import Skills from "./components/Skills";
+import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
               <About />
               <Projects />
               <Skills></Skills>
+              <Contact></Contact>
 
               <div className="vertical-socials">
                 <div className="line"></div>
