@@ -27,21 +27,29 @@ html{
 .vertical-socials {
   position: fixed;
   left: 30px;
-  bottom: 0;
+  top: 50%;
+  transform: translateY(-50%); /* keeps it perfectly centered */
   display: flex;
   flex-direction: column;
-  gap: 40px;
   align-items: center;
-  z-index: 10;
+  gap: 25px;
+  z-index: 1000;
 }
 
 .vertical-socials a {
-  writing-mode: vertical-rl; /* Rotates the text */
+  writing-mode: vertical-rl;
   text-decoration: none;
   color: var(--smoke-signal);
   font-size: 0.8rem;
   opacity: 0.6;
-  transition: 0.3s;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+}
+
+.vertical-socials a:hover {
+  opacity: 1;
+  transform: translateY(-4px);
+  color: var(--hover-dark);
 }
 
 .vertical-socials .line {

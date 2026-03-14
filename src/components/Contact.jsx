@@ -28,7 +28,7 @@ function Contact() {
   };
 
   return (
-    <section className="contact">
+    <section id="contact" className="contact">
       <div className="contact-container">
         <h2>Get in Touch</h2>
         
@@ -97,7 +97,7 @@ function Contact() {
                 <FiMail className="contact-icon" />
               </div>
               <div>
-                <h4>fathimanaila71@email.com</h4>
+                <h4>fathimanaila71@gmail.com</h4>
                 <p>Send us your query anytime!</p>
               </div>
             </div>

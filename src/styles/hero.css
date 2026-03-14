@@ -129,24 +129,28 @@
 
 .hero-img {
   width: 100%;
-  max-width: 450px;
-  z-index: 2;
-  border-radius: 20px; /* Optional: adds a clean look */
+  max-width: 380px;
+  border-radius: 50%;
+  background-color: #3b2f33;
+  padding: 8px;
 }
 
 .hero-visual::before {
   content: "";
   position: absolute;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(255, 77, 109, 0.2) 0%, transparent 70%);
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(255, 77, 109, 0.25) 0%, transparent 70%);
   top: 50%;
-  left: 50%;
+  left: 60%;
   transform: translate(-50%, -50%);
-  z-index: 1; /* Sits behind the image */
+  z-index: 1;
   border-radius: 50%;
 }
 
+.hero-title {
+  font-size: clamp(3rem, 6vw, 4.5rem);
+}
 .greeting {
   display: inline-block;
   background-color: rgba(255, 77, 109, 0.1); /* Light pink tint */
@@ -156,4 +160,14 @@
   font-size: 0.9rem;
   font-weight: 700;
   margin-bottom: 20px;
+}
+
+.hero-card {
+  background: var(--pale-ivory);
+  padding: 40px;
+  border-radius: 30px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.08);
+  position: relative;
+  z-index: 2;
+  border: 1px solid rgba(41,37,40,0.08);
 }

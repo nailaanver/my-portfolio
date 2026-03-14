@@ -1,5 +1,5 @@
 import "../styles/Hero.css";
-import heroImage from "../assets/images/girl-4.jpg";
+import heroImage from "../assets/images/hero-img3.jpg";
 
 
 function Hero() {
@@ -37,9 +37,9 @@ function Hero() {
         </div>
 
         <div className="hero-visual">
-          <div className="shape-bg"></div>
-          {/* Add your photo here */}
-          <img src={heroImage} alt="Fathima Naila" className="hero-img" />
+          <div className="hero-card">
+            <img src={heroImage} alt="Developer Illustration" className="hero-img" />
+          </div>
         </div>
 
       </div>
